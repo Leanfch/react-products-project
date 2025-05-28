@@ -1,3 +1,4 @@
+import ShopImg from '../../public/shop-svgrepo-com.svg'
 interface SearchBarProps {
     searchTerm: string;
     onSearchChange: ( term: string ) => void;
@@ -11,7 +12,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, onSearchChange}) => {
     return (
         <header className="searchBar" style={{ marginBottom: '20px' }}>
             <div>
-            <h1>Mini E-commerce</h1>
+            <h1><img src={ShopImg} alt="Store icon" />Store e-shop</h1>
             <input 
             type="text"
             id="search"

@@ -15,7 +15,8 @@ body {
     background-color: #fff;
 }
 .searchBar {
-    background-color: #c49f70;
+    background: #ff512e;
+    background: linear-gradient(64deg,rgba(255, 81, 46, 1) 0%, rgba(252, 176, 69, 1) 100%);
     padding: 1rem;
     font-size: 1.5rem;
 
@@ -28,9 +29,20 @@ body {
             font-size: 3rem;
             font-weight: 900;
             text-align: center;
-            background-color: #c49f70;
             color: #f5f5f5;
             padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            img {
+                width: 50px;
+                height: auto;
+                display: inline-block;
+                background-color: black;
+                border-radius: 50%;
+                padding: 5px;
+            }
         }
     }
 
@@ -38,7 +50,7 @@ body {
         outline: 0;
         padding: 1rem;
         width: 300px;
-        border-radius: 8px;
+        border-radius: 12px;
         border: none;
     }
 
