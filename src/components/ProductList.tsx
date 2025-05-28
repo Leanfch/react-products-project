@@ -8,7 +8,7 @@ interface ProductListProps {
 
 const ProductList: React.FC<ProductListProps> = ({ products, onProductSelect }) => {
     if (products.length === 0) {
-        return <p>No se encontraron productos</p>;
+        return <p className='noProducts'>Lo sentimos, no se encontraron productos</p>;
     }
     return (
         <div className='productsListContainer'>

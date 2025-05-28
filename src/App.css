@@ -117,3 +117,28 @@ body {
         }
     }
 }
+
+.noProducts {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.productDetails {
+    h2 {
+        font-size: 3rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+
+    p.price {
+        color: #0a7bc7;
+        font-size: 2.3rem;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 1.5rem;
+        line-height: 1.8;
+        margin-bottom: .5rem;
+    }
+}
