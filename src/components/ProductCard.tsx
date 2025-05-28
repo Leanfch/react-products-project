@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import type { Product } from '../interface/ProductInterface';
+import type { Product } from '../interface/ProductInterface.ts';
 
 interface ProductCardProps {
     product: Product;
@@ -30,7 +30,7 @@ const ProductCard: React.FC<ProductCardProps> = React.memo(({ product, onProduct
         onMouseOver={(e) => (e.currentTarget.style.transform = 'translateY(-5px)')}
         onMouseOut={(e) => (e.currentTarget.style.transform = 'translateY(0)')}
         >
-            <img src={product.image} alt={`Imagen de ${product.title}`} style={{ maxWidth: '100%', height: '150px', objectFit: 'contain', marginBottom: '10px' }} />
+            <img src={product.thumbnail} alt={`Imagen de ${product.title}`} style={{ maxWidth: '100%', height: '150px', objectFit: 'contain', marginBottom: '10px' }} />
             <h3>{product.title}</h3>
             <p>${product.price.toFixed(2)}</p>
         </div>

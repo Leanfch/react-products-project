@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import type { Product } from '../interface/ProductInterface.ts';
+import type { Product, ProductsApiResponse } from '../interface/ProductInterface';
 
 interface UseFetchResult {
     data: Product[] | null;
@@ -18,11 +18,14 @@ const useFetchingProducts = ( url : string ): UseFetchResult => {
                 setLoading(true);
                 setError(null);
                 const response = await fetch(url);
+
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
-                const result: Product[] = await response.json();
-                setData(result);
+
+                const apiResponse: ProductsApiResponse = await response.json();
+                
+                setData(apiResponse.products);
             } catch (err: unknown) {
                 if (err instanceof Error ) {
                     setError(err);
