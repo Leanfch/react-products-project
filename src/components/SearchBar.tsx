@@ -9,15 +9,19 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, onSearchChange}) => {
     }
 
     return (
-        <section className="searchBar" style={{ marginBottom: '20px' }}>
-            <label htmlFor="search">Buscar producto:</label>
+        <header className="searchBar" style={{ marginBottom: '20px' }}>
+            <div>
+            <h1>Mini E-commerce</h1>
             <input 
             type="text"
             id="search"
             value={searchTerm}
             onChange={handleChange}
             placeholder="Escribe para buscar..."
-        /></section>
+            />
+            </div>
+        </header>
+
     )
 }
 

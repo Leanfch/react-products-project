@@ -32,7 +32,6 @@ export const App = () => {
     if(error) return <div className='error'>Error: { error.message }</div>
     return (
         <div className='container'>
-            <h1>Mini E-commerce</h1>
             {!selectedProduct ? (
                 <>
                     <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm}/>
