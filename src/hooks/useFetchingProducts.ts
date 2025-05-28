@@ -23,7 +23,6 @@ const useFetchingProducts = ( url : string ): UseFetchResult => {
                 }
                 const result: Product[] = await response.json();
                 setData(result);
-                console.log(result)
             } catch (err: unknown) {
                 if (err instanceof Error ) {
                     setError(err);

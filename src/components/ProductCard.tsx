@@ -7,7 +7,6 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = React.memo(({ product, onProductClick }) => {
-    console.log(`Rendering ProductCard: ${product.title}`);
 
     const handleCardClick = useCallback(() => {
         onProductClick(product);

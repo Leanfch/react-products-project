@@ -35,7 +35,6 @@ export const App = () => {
             {!selectedProduct ? (
                 <>
                     <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm}/>
-                    {console.log( filteredProducts )}
                     <ProductList products={filteredProducts} onProductSelect={handleProductSelect}/>
                 </>
             ) : (
